@@ -37,8 +37,24 @@ header.navbar-fixed {
 }
 .landing1 {
   height: 100vh;
-  padding: 8%;
+  padding: 4%;
 }
 .l1Header {
   font-family: 'Montserrat', sans-serif;
+}
+.l1title {
+  margin-top: 0;
+  margin-bottom: 10vmin;
+}
+.grid-container {
+  display: inline-grid;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #2196F3;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
 }
