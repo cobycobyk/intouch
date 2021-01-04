@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Profile</h1>
+
+
+<div class="card">
+    
+        <div class="card-content">
+            <span class="card-title">
+                <p>Name: {{ profile.user }}</p>
+            </span>
+            <p>City: {{ profile.city }}</p>
+            <p>State: {{ profile.state }}</p>
+            <p>Phone: {{ profile.ph_number }}</p>
+            <p>ID: {{ profile.user.id }}</p>
+
+        </div>
+    
+
+</div>
+
+
+<a href="{ url 'edit_profile' user_id }">Edit Profile</a>
+
+{% endblock %}

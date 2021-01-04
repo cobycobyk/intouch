@@ -52,7 +52,6 @@ header.navbar-fixed {
 .grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
-  background-color: #2196F3;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
