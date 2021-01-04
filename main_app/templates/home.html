@@ -1,6 +1,132 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- Top content -->
+<section class="top-content">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active min-vh-100">
+                <img src="https://i.imgur.com/UBcop2h.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The Simplest way to connect with your employees on a large scale</h1>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">Join Today</a>
+                </div>
+            </div>
+            <div class="carousel-item min-vh-100">
+                <img src="https://i.imgur.com/NmWStcY.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The Simplest way to connect with your employees on a large scale</h1>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">Join Today</a>
+                </div>
+            </div>
+            <div class="carousel-item min-vh-100">
+                <img src="https://i.imgur.com/6tglCrw.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The Simplest way to connect with your employees on a large scale</h1>
+                    <a class="btn btn-primary" href="{% url 'signup' %}">Join Today</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</section>
+<section class="landing1">
+    <div class="l1Header">
+        <div class="l1title">
+            <h1>Communication For Large Scale</h1>
+            <h1>Buisnesses Made Easy</h1>
+        </div>
 
-<h1>Home</h1>
+        <div class="grid-container">
+            <!-- <div class="row row-cols-2"> -->
+                <div class="grid-item">
+                    <h2>Helping you grow</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Uniting All Your Employees and Team Members</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Simple Fast Connection at Your Fingertips</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+                <div class="grid-item">
+                    <h2>Keep Track Of All Events, Notifications, and Alerts</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- <div class="l1body">
+        <div class="row">
+            <div class="col">
+                <h2>Helping you grow</h2>
+                <p>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    Neque porro quisquam est.
+                </p>
+                <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+            </div>
+            <div class="col">
+                <h2>Uniting All Your Employees and Team Members</h2>
+                <p>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    Neque porro quisquam est.
+                </p>
+                <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Simple Fast Connection at Your Fingertips</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+                <div class="col">
+                    <h2>Keep Track Of All Events, Notifications, and Alerts</h2>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        Neque porro quisquam est.
+                    </p>
+                    <a class="btn btn-outline-primary" href="{% url 'about' %}">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>
 
 {% endblock %}
