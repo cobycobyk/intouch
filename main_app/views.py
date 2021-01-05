@@ -21,18 +21,15 @@ def profile(request):
   return render(request, 'profile.html', {'profile': profile})
 
 
-# class ProfileCreate(LoginRequiredMixin, CreateView):
-#   model = Profile
-#   fields = '__all__'
+class ProfileCreate(LoginRequiredMixin, CreateView):
+  model = Profile
+  fields = ['city', 'state', 'ph_number']
 
-#   def form_valid(self, form):
-#     form.instance.user = self.request.user
-#     form.instance.city = self.request.city
-#     form.instance.state = self.request.state
-#     form.instance.ph_number = self.request.ph_number
-#     return super().form_valid(form)
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
-#   success_url = '/profile/'
+  success_url = '/profile/'
 
 # class ProfileEdit(UpdateView):
 #   model = Profile
@@ -49,7 +46,7 @@ def signup(request):
       user = form.save()
       #this is how we log a user in via code
       login(request, user)
-      return redirect('edit_profile', user_id=user_id)
+      return redirect('profile_create')
     else:
       error_message = 'Invalid sign up - try again'
   # a bad POST or a GET request, so render signup.html with an empty form

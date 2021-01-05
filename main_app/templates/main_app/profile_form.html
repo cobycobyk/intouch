@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Profile</h1>
+{% if object %}
+  <h1>Edit Profile</h1>
+{% else %}
+  <h1>Create Profile (require)</h1>
+{% endif %}
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" class="btn" value="submit">
+</form>
+{% if object %}
+  <a href="{% url 'profile' %}">Cancel</a>
+{% endif %}
+{% endblock %}
