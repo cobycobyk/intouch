@@ -7,7 +7,7 @@
 {% else %}
   <h1>Create Profile (require)</h1>
 {% endif %}
-<form action="{% url 'profile' object.id %}" method="POST">
+<form action="" method="POST">
   {% csrf_token %}
   {{ form }}
   <input type="submit" class="btn" value="submit">

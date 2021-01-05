@@ -8,5 +8,4 @@ urlpatterns = [
   path('profile/', views.profile, name='profile'),
   path('profile/create/', views.ProfileCreate.as_view(), name='profile_create'),
   # path('profile/<int:pk>/edit/', views.ProfileEdit.as_view(), name='edit_profile'),
-  # path('profile/create/', views.ProfileCreate.as_view(), name='profile_create'),
 ]
