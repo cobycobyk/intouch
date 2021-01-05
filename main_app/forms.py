@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from .models import Profile
+from .models import Message
 
-class ProfileForm(ModelForm):
+class MessageForm(ModelForm):
     class Meta:
-        model = Profile
-        fields = ['city', 'state', 'ph_number']
+        model = Message
+        fields = ['date', 'content']
