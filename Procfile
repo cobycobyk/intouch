@@ -1,1 +1,1 @@
-web: gunicorn intouch.wsi
+web: gunicorn intouch.wsgi
