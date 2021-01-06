@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import MessageForm
 from .models import Profile, Message
+from datetime import date
 
 
 # Create your views here.
@@ -58,9 +59,13 @@ def message(request):
 
 @login_required
 def add_message(request):
-  form = MessageForm(request.POST)
-  if form.is_valid():
-    form.save()
+  profile = Profile.objects.get(user=request.user)
+  message = Message(
+    date = date.today(),
+    content = request.POST['content'],
+    profile = profile
+  )
+  message.save()
   return redirect('message')
 
 # def edit_profile(request, user_id):
