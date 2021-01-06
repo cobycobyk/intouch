@@ -13,5 +13,11 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return reverse('profile', kwargs={'profile_id': self.id})
    
+class Message(models.Model):
+    date = models.DateTimeField('Send Date')
+    content = models.TextField(max_length=280)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, default=None)
+    # recipient = models.ForeignKey(Recipient)
 
-    
+    def get_absolute_url(self):
+        return reverse('message', kwargs={'message_id': self.id})

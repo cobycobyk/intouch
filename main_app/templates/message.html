@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>compose</h1>
+<form action="{% url 'add_message' %}" method="POST">
+  {% csrf_token %}
+  <textarea name="content" id="id_content" cols="30" rows="10"></textarea>
+  <input type="submit" value="Add Message" class="btn">
+</form>
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for message in profile.message_set.all %}
+    <tr>
+      <td>{{message.date}}</td>
+      <td>{{message.content}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

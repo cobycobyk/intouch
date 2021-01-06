@@ -4,8 +4,8 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import ProfileForm
-from .models import Profile
+from .forms import MessageForm
+from .models import Profile, Message
 
 
 # Create your views here.
@@ -20,7 +20,6 @@ def profile(request):
   profile = Profile.objects.get(user=request.user)
   return render(request, 'profile.html', {'profile': profile})
 
-
 class ProfileCreate(LoginRequiredMixin, CreateView):
   model = Profile
   fields = ['city', 'state', 'ph_number']
@@ -30,11 +29,6 @@ class ProfileCreate(LoginRequiredMixin, CreateView):
     return super().form_valid(form)
 
   success_url = '/profile/'
-
-# class ProfileEdit(UpdateView):
-#   model = Profile
-#   fields = '__all__'
-
 
 def signup(request):
   error_message = ''
@@ -54,7 +48,20 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)    
 
+@login_required
+def message(request):
+  profile = Profile.objects.get(user=request.user)
+  message_form = MessageForm()
+  return render(request, 'message.html', {
+    'profile': profile, 'message_form': message_form
+  })
 
+@login_required
+def add_message(request):
+  form = MessageForm(request.POST)
+  if form.is_valid():
+    form.save()
+  return redirect('message')
 
 # def edit_profile(request, user_id):
 #   profile = Profile.objects.get(id=user_id)
