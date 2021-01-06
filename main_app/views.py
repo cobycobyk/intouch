@@ -68,15 +68,9 @@ def add_message(request):
   message.save()
   return redirect('message')
 
-# def edit_profile(request, user_id):
-#   profile = Profile.objects.get(id=user_id)
-#   error_message = ''
-#   if request.method == 'POST':
-#     #this is how to create a 'user' form object
-#     # that includes the data from the browser
-#     form = ProfileForm(request.POST)
-#     if form.is_valid():
-#       profile_edit = form.save(commit=False)
-#       profile_edit.user_id = user_id
-#       profile_edit.save()
-#     return redirect('profile', user_id=user_id)  
+
+class ProfileUpdate(LoginRequiredMixin, UpdateView):
+  model = Profile
+  fields = ['city', 'state', 'ph_number']
+
+  success_url = '/profile/'
