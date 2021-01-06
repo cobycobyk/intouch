@@ -50,13 +50,18 @@ def signup(request):
 
 @login_required
 def message(request):
-  form = MessageForm(request.POST)
   profile = Profile.objects.get(user=request.user)
+  message_form = MessageForm()
+  return render(request, 'message.html', {
+    'profile': profile, 'message_form': message_form
+  })
+
+@login_required
+def add_message(request):
+  form = MessageForm(request.POST)
   if form.is_valid():
-    new_message = form.save(commit=False)
-    new_message.profile_id = profile
-    new_message.save()
-  return render(request, 'message.html')
+    form.save()
+  return redirect('message')
 
 # def edit_profile(request, user_id):
 #   profile = Profile.objects.get(id=user_id)

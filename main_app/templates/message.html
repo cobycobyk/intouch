@@ -2,8 +2,11 @@
 {% block content %}
 
 <h1>compose</h1>
-
-<!-- <textarea name="" id="" cols="30" rows="10">Content</textarea>
+<form action="{% url 'add_message' %}" method="POST">
+  {% csrf_token %}
+  <textarea name="content" id="id_content" cols="30" rows="10"></textarea>
+  <input type="submit" value="Add Message" class="btn">
+</form>
 <table class="striped">
   <thead>
     <tr>
@@ -15,9 +18,9 @@
     {% for message in profile.message_set.all %}
     <tr>
       <td>{{message.date}}</td>
-      <td>{{message.get_content_display}}</td>
+      <td>{{message.content}}</td>
     </tr>
     {% endfor %}
   </tbody>
-</table> -->
+</table>
 {% endblock %}
