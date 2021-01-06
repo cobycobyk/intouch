@@ -84,6 +84,8 @@ header.navbar-fixed {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 50% 50%;
   text-align: center;
+  grid-gap: 0 0;
+  background-color: blue;
 }
 .l4header {
   text-align: center;
