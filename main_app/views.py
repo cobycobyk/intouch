@@ -69,8 +69,8 @@ def add_message(request):
   # recipient = Recipient.objects.get(ph_number=request.POST['recipients'])
   recipients = request.POST.getlist('recipients')
   for recipient in recipients:
-    account_sid = "AC292d2c9173bcaf7f3c8af14b009f672d"
-    auth_token = "ba02dd39685a6775efaec15e692235c5"
+    account_sid = os.environ['ACCOUNT_SID']
+    auth_token = os.environ['AUTH_TOKEN']
     client = Client(account_sid, auth_token)
     message = client.messages.create(
     to=recipient,
