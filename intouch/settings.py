@@ -128,3 +128,7 @@ LOGOUT_REDIRECT_URL = '/'
 #configure Django app for heroku deployment
 import django_heroku
 django_heroku.settings(locals())
+
+import environ
+environ.Env()
+environ.Env.read_env()
