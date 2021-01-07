@@ -115,3 +115,9 @@ body{
 footer{
   margin-top:auto; 
 }
+header{
+  height: 4%;
+}
+main {
+  margin-top: 3%;
+}
