@@ -8,6 +8,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import MessageForm
 from .models import Profile, Message , Recipient
 from datetime import date
+from twilio.rest import Client
+import os
 
 
 # Create your views here.
@@ -63,14 +65,30 @@ def message(request):
 @login_required
 def add_message(request):
   profile = Profile.objects.get(user=request.user)
-  message = Message(
+  print(request.POST.getlist('recipients')) 
+  # recipient = Recipient.objects.get(ph_number=request.POST['recipients'])
+  recipients = request.POST.getlist('recipients')
+  for recipient in recipients:
+    account_sid = "AC292d2c9173bcaf7f3c8af14b009f672d"
+    auth_token = "ba02dd39685a6775efaec15e692235c5"
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+    to=recipient,
+    from_='+14693789344',
+    body=request.POST['content']
+    )
+  # for recipient in recipient
+  new_message = Message(
     date = date.today(),
     content = request.POST['content'],
     profile = profile,
-    recipients = request.POST['recipients']
   )
-  message.save()
+  new_message.save()
+  # print(message.sid)
+  # x = Recipient.objects.get(recipient=recipient.id)
   return redirect('message')
+
+
 
 
 class ProfileUpdate(LoginRequiredMixin, UpdateView):

@@ -26,17 +26,17 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return reverse('profile', kwargs={'profile_id': self.id})
 
-class Recipient(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    ph_number = PhoneField(null=False, blank=False)
 
 class Message(models.Model):
     date = models.DateTimeField('Send Date')
     content = models.TextField(max_length=280)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, default=None)
-    recipients = models.ManyToManyField(Recipient)
 
     def get_absolute_url(self):
         return reverse('message', kwargs={'message_id': self.id})
 
+class Recipient(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    ph_number = PhoneField(null=False, blank=False)
+    message = models.ForeignKey(Message, on_delete=models.CASCADE, default=None, blank=True, null=True)
