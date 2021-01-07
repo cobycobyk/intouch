@@ -101,9 +101,9 @@ header.navbar-fixed {
   height: auto;
   float: right;
 }
-/* h1 {
+h1 {
   font-size: 100px;
-} */
+}
 body{ height:100vh; margin:0; }
 
 header{ min-height:50px; background:lightcyan; }

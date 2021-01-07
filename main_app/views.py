@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from django.views.generic.edit import UpdateView, CreateView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView
+from django.views.generic import ListView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import MessageForm
-from .models import Profile, Message
+from .models import Profile, Message , Recipient
 from datetime import date
 
 
@@ -53,8 +54,10 @@ def signup(request):
 def message(request):
   profile = Profile.objects.get(user=request.user)
   message_form = MessageForm()
+  recipients = Recipient.objects.all
   return render(request, 'message.html', {
-    'profile': profile, 'message_form': message_form
+    'profile': profile, 'message_form': message_form,
+    'recipients': recipients
   })
 
 @login_required
@@ -63,7 +66,8 @@ def add_message(request):
   message = Message(
     date = date.today(),
     content = request.POST['content'],
-    profile = profile
+    profile = profile,
+    recipients = request.POST['recipients']
   )
   message.save()
   return redirect('message')
@@ -74,3 +78,24 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
   fields = ['city', 'state', 'ph_number']
 
   success_url = '/profile/'
+
+# class BusinessCreate(LoginRequiredMixin, CreateView):
+#   model = Business
+#   fields = '__all__'
+
+class RecipientCreate(LoginRequiredMixin, CreateView):
+  model = Recipient
+  fields = '__all__'
+  
+  def form_valid(self, form):
+    return super().form_valid(form)
+
+  success_url = '/recipients/create/'
+
+class RecipientList(LoginRequiredMixin, ListView):
+  model = Recipient
+
+class RecipientDelete(LoginRequiredMixin, DeleteView):
+  model = Recipient
+
+  success_url = '/recipients/'
