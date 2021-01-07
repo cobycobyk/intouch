@@ -106,12 +106,22 @@ h1 {
 }
 body{ height:100vh; margin:0; }
 
-header{ min-height:50px; background:lightcyan; }
-footer{ min-height:50px; background:rgb(206, 206, 206); }
+header{ 
+  min-height:50px; background:lightcyan;
+}
+footer{ 
+  min-height:50px; background:rgb(206, 206, 206);
+}
 body{ 
   display:flex; 
   flex-direction:column; 
 }
 footer{
   margin-top:auto; 
+}
+header{
+  height: 4%;
+}
+main {
+  margin-top: 3%;
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
-from django.views.generic import ListView
+from django.views.generic import ListView , DetailView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -99,3 +99,5 @@ class RecipientDelete(LoginRequiredMixin, DeleteView):
   model = Recipient
 
   success_url = '/recipients/'
+class RecipientDetail(LoginRequiredMixin,DetailView):
+  model = Recipient
