@@ -6,6 +6,13 @@
   {% csrf_token %}
   <textarea name="content" id="id_content" cols="30" rows="10"></textarea>
   <input type="submit" value="Add Message" class="btn">
+  <select name="recipients" id="recipient" multiple="multiple">
+    
+    {% for recipient in recipients %}
+    <option value="recipient">{{ recipient.name }}</option>
+    {% endfor %}
+   
+  </select>
 </form>
 <table class="striped">
   <thead>
@@ -19,8 +26,13 @@
     <tr>
       <td>{{message.date}}</td>
       <td>{{message.content}}</td>
+      <td>{{ message.recipient }}</td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
+<script>
+  const selectEl = document.getElementById('recipient');
+  M.FormSelect.init(selectEl);
+</script>
 {% endblock %}

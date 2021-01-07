@@ -101,9 +101,9 @@ header.navbar-fixed {
   height: auto;
   float: right;
 }
-/* h1 {
+h1 {
   font-size: 100px;
-} */
+}
 body{ height:100vh; margin:0; }
 
 header{ min-height:50px; background:lightcyan; }
@@ -114,20 +114,4 @@ body{
 }
 footer{
   margin-top:auto; 
-}
-p {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
