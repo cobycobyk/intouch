@@ -7,7 +7,7 @@
       <form id="compose-message" action="{% url 'add_message' %}" method="POST">
         {% csrf_token %}
         <p>Content:</p>
-        <textarea name="content form-control" id="id_content" cols="30" rows="10"></textarea>
+        <textarea name="content" id="id_content" cols="30" rows="10"></textarea>
         <div id="inlineBtn">
           <br>
           <input type="submit" value="Send Message ->" class="btn btn-primary">
