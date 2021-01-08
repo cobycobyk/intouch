@@ -254,7 +254,16 @@ body > main > div.recipient > form {
 body > main > div > div > p > span {
  font-weight: bold;
 }
+body > main > div > div > span > p > span{
+ font-weight: bold;
+}
 .Rmain {
   padding: 10vmin;
+}
+body > main > div > div > span > p{
+ text-transform: capitalize;
+}
+body > main > div > div > p {
+  text-transform: capitalize;
 }
 
