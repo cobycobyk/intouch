@@ -189,3 +189,19 @@ html {
 }.card-deck {
   display: flex;
 }
+.signup {
+  text-align: center;
+}
+
+form {
+  align-self: center;
+}
+body > main > div > form > input.btn {
+  background-color: #0275d8;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin: 5vmin 2vmin;
+  cursor: pointer;
+}
