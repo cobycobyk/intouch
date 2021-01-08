@@ -65,27 +65,24 @@ def message(request):
 @login_required
 def add_message(request):
   profile = Profile.objects.get(user=request.user)
-  print(request.POST.getlist('recipients')) 
-  # recipient = Recipient.objects.get(ph_number=request.POST['recipients'])
   recipients = request.POST.getlist('recipients')
   for recipient in recipients:
     account_sid = os.environ['ACCOUNT_SID']
     auth_token = os.environ['AUTH_TOKEN']
+    print(account_sid, auth_token)
     client = Client(account_sid, auth_token)
     message = client.messages.create(
     to=recipient,
     from_='+14693789344',
     body=request.POST['content']
     )
-  # for recipient in recipient
+    print(message.sid)
   new_message = Message(
     date = date.today(),
     content = request.POST['content'],
     profile = profile,
   )
   new_message.save()
-  # print(message.sid)
-  # x = Recipient.objects.get(recipient=recipient.id)
   return redirect('message')
 
 
@@ -103,7 +100,7 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
 
 class RecipientCreate(LoginRequiredMixin, CreateView):
   model = Recipient
-  fields = '__all__'
+  fields = ['name', 'email', 'ph_number']
   
   def form_valid(self, form):
     return super().form_valid(form)
