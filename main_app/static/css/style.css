@@ -64,7 +64,7 @@ header.navbar-fixed {
   padding: 10vmin;
 }
 .landingPanel4{
-  height: 100vh;
+  height: 200vh;
   padding: 10%;
 }
 .landingPanel2g{
@@ -140,7 +140,7 @@ body > header > nav > div > a > img {
 }
 .companies {
   margin: 5px;
-  height: 25vmin;
+  height: 45vmin;
 }
 
 body {
