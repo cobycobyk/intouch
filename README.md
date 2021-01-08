@@ -8,12 +8,7 @@ Whether they are working remotely or spread out across the country, staying in t
 
 --- 
 ## App Design
-Screenshots:
-![screenshot](https://static.wixstatic.com/media/f12358_c3f590e703d84730a1c800ee32546cd1~mv2.png/v1/fill/w_929,h_492,al_c,q_90,usm_0.66_1.00_0.01/f12358_c3f590e703d84730a1c800ee32546cd1~mv2.webp)
-![screenshot](https://static.wixstatic.com/media/f12358_52be5868fd2d486490808ef1cf275c70~mv2.png/v1/fill/w_1010,h_492,al_c,q_90,usm_0.66_1.00_0.01/f12358_52be5868fd2d486490808ef1cf275c70~mv2.webp)
-![screenshot](https://static.wixstatic.com/media/f12358_3acda1e01a894a46930bae16996c4203~mv2.png/v1/fill/w_1010,h_492,al_c,q_90,usm_0.66_1.00_0.01/f12358_3acda1e01a894a46930bae16996c4203~mv2.webp)
-![screenshot](https://static.wixstatic.com/media/f12358_5083305049ba4d41965ff8d8a3460d32~mv2.png/v1/fill/w_1010,h_492,al_c,q_90,usm_0.66_1.00_0.01/f12358_5083305049ba4d41965ff8d8a3460d32~mv2.webp)
-![screenshot](https://static.wixstatic.com/media/f12358_67fb116fb841416f9de0d68e6c6bd800~mv2.png/v1/fill/w_1010,h_492,al_c,q_90,usm_0.66_1.00_0.01/f12358_67fb116fb841416f9de0d68e6c6bd800~mv2.webp)
+Screenshots: More to come
 
 App Planning: [Trello Board](https://trello.com/b/reUp27c0/intouch-django-app), [Pitch Deck](https://trello.com/c/kzlKVfor/14-pitch-deck)
 
