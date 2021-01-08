@@ -3,17 +3,17 @@
 
 
 <div class="card">
-    <div class="card-body"></div>
+    <div class="card-body">
         <span class="card-title">
-            <p>Name: {{ profile.user }}</p>
+            <p><span>Name:</span> {{ profile.user }}</p>
         </span>
-        <p>City: {{ profile.city }}</p>
-        <p>State: {{ profile.state }}</p>
-        <p>Phone: {{ profile.ph_number }}</p>
-        <p>ID: {{ profile.user.id }}</p>
-        <p>Business: {{ profile.business }}</p>
+        <p><span>City:</span> {{ profile.city }}</p>
+        <p><span>State:</span> {{ profile.state }}</p>
+        <p><span>Phone:</span> {{ profile.ph_number }}</p>
+        <p><span>ID:</span> {{ profile.user.id }}</p>
+        <p><span>Business:</span> {{ profile.business }}</p>
     </div>
+    <a class="btn btn-primary" href="{% url 'profile_update' profile.id%}">Edit Profile</a>
 </div>
-<a href="{% url 'profile_update' profile.id%}">Edit Profile</a>
 
 {% endblock %}
