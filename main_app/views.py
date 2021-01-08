@@ -100,7 +100,7 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
 
 class RecipientCreate(LoginRequiredMixin, CreateView):
   model = Recipient
-  fields = '__all__'
+  fields = ['name', 'email', 'ph_number']
   
   def form_valid(self, form):
     return super().form_valid(form)
