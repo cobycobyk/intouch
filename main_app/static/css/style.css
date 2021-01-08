@@ -36,7 +36,7 @@ header.navbar-fixed {
   width: 100vw;
 }
 .landing1 {
-  height: 100vh;
+  height: 110vh;
   padding: 4%;
 }
 .l1Header {
@@ -47,13 +47,102 @@ header.navbar-fixed {
   margin-bottom: 10vmin;
 }
 .grid-container {
-  display: inline-grid;
-}
-.grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 15% 2%;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: left;
+}
+.landingPanel2{
+  height: 50vh;
+  padding: 10vmin;
+}
+.landingPanel3{
+  height: 60vh;
+  padding: 10vmin;
+}
+.landingPanel4{
+  height: 200vh;
+  padding: 10%;
+}
+.landingPanel2g{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+.landingPanel3g{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+.landingPanel4g{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+  text-align: center;
+  grid-gap: 0 0;
+  justify-items: center;
+}
+.l4header {
+  text-align: center;
+}
+
+.panelImg1left {
+  max-width: 85%;
+  height: auto;
+  animation: slideUp .8s ease-in-out  forwards 1s;
+}
+.panelImg1right {
+  max-width: 85%;
+  height: auto;
+  float: right;
+}
+body{ height:100vh; margin:0; }
+
+header{ 
+  min-height:50px; background:lightcyan;
+}
+footer{ 
+  min-height:50px; background:rgb(206, 206, 206);
+}
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+footer{
+  margin-top:auto; 
+}
+header{
+  height: 4%;
+}
+main {
+  margin-top: 4%;
+}
+body > header > nav > div > a > img {
+  padding: 0;
+  width: 6vmin;
+  height: auto;
+}
+.navbar-brand {
+  margin-left: .5rem;
+  margin-right: .5rem; 
+}
+.carousel-caption {
+  bottom: 4rem;
+}
+.flex-container {
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.companies {
+  margin: 5px;
+  height: 45vmin;
+}
+
+body {
+  line-height: 1;
 }

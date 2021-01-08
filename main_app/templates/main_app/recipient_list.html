@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Recipient List</h1>
+{% for recipient in recipient_list %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ recipient.name }}</span>
+            <p>Number: {{ recipient.ph_number }}</p>
+            <p>Email: {{ recipient.email }}</p>
+        </div>
+        <a href="{% url 'recipient_delete' recipient.id %}">Delete</a>
+    </div>
+{% endfor %}
+{% endblock %}

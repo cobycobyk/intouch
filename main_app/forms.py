@@ -1,7 +1,12 @@
 from django.forms import ModelForm
-from .models import Profile
+from .models import Message , Recipient
 
-class ProfileForm(ModelForm):
+class RecipientForm(ModelForm):
     class Meta:
-        model = Profile
-        fields = '__all__'
+        model = Recipient
+        fields = ['name', 'ph_number', 'message']
+
+class MessageForm(ModelForm):
+    class Meta:
+        model = Message
+        fields = ['date', 'content']
