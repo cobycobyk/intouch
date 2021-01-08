@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Profile</h1>
-{% if object %}
+<div class="profile card">
+  {% if object %}
   <h1>Edit Profile</h1>
-{% else %}
-  <h1>Create Profile (required)</h1>
-{% endif %}
-<form action="" method="POST">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" class="btn" value="submit">
-</form>
-{% if object %}
+  {% else %}
+  <h1>Create Profile <span style="color: red;">(required)</span></h1>
+  {% endif %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" class="btn" value="submit">
+  </form>
+  {% if object %}
   <a href="{% url 'profile' %}">Cancel</a>
-{% endif %}
-{% endblock %}
+  {% endif %}
+  {% endblock %}
+</div>

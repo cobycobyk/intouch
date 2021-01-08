@@ -100,10 +100,10 @@ header.navbar-fixed {
 body{ height:100vh; margin:0; }
 
 header{ 
-  min-height:50px; background:lightcyan;
+  min-height:50px; background:whitesmoke;
 } 
 footer{ 
-  background: #d1d1d1;
+  background: #F6F7F8;
   margin-top: 10vmin;
 }
 body{ 
@@ -153,7 +153,6 @@ body {
 
 body > footer > div > div > div > a > img{
   padding: 0;
-  width: 6vmin;
 }
 body > footer > div > div > div > a {
   text-align: center;
@@ -191,8 +190,15 @@ html {
 }
 .signup {
   text-align: center;
+  background-color: #E8EBE4;
 }
-
+.login {
+  text-align: center;
+  background-color: #E8EBE4;
+}
+.login > h1 {
+  margin-bottom: 3vmin;
+}
 form {
   align-self: center;
 }
@@ -202,6 +208,27 @@ body > main > div > form > input.btn {
   color: white;
   padding: 10px 25px;
   text-decoration: none;
-  margin: 5vmin 2vmin;
+  margin: 2vmin 2vmin 1vmin 2vmin;
   cursor: pointer;
+}
+body > main > div > form > table > tbody > tr > th {
+  vertical-align:middle;
+}
+body > main > div > form > table > tbody > tr {
+  height: 10vmin;
+}
+#footimg {
+  width: 3%;
+  margin-top: 2vmin;
+}
+body > footer > div {
+  display: block;
+  text-align: center;
+}
+.profile {
+  text-align: center;
+}
+body > main > .profile > form > table > tbody > tr {
+  margin: 2vmin;
+  height: 7vmin;
 }
