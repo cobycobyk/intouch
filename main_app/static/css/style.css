@@ -324,6 +324,7 @@ body > main > section.landingPanel3 > div > div > p {
 
 .msgContainer {
   padding: 5vmin;
+  margin-bottom: 5vmin;
 }
 .grid-container2{
   display: grid;
