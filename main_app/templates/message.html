@@ -1,32 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1>compose</h1>
-<form action="{% url 'add_message' %}" method="POST">
-  {% csrf_token %}
-  <textarea name="content" id="id_content" cols="30" rows="10"></textarea>
-  <input type="submit" value="Add Message" class="btn">
-  <select name="recipients" id="recipient" multiple="multiple">
-    {% for recipient in recipients %}
-    <option name="recipient" value="{{ recipient.ph_number }}">{{ recipient.name }}</option>
-    {% endfor %}
-  </select>
-</form>
-<table class="striped">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Message</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for message in profile.message_set.all %}
-    <tr>
-      <td>{{message.date}}</td>
-      <td>{{message.content}}</td>
-      <td>{{ message.recipient }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endblock %}
+<div class="msgContainer">
+  <h1 id="compose-title">Create a New Message</h1>
+  <div id=compose class="grid-container2">
+    <div id="new-message grid-item">
+      <form id="compose-message" action="{% url 'add_message' %}" method="POST">
+        {% csrf_token %}
+        <p>Content:</p>
+        <textarea name="content form-control" id="id_content" cols="30" rows="10"></textarea>
+        <div id="inlineBtn">
+          <br>
+          <input type="submit" value="Send Message ->" class="btn btn-primary">
+        </div>
+    </div>
+    <div id="new-recipient grid-item">
+      <p>Recipients:</p>
+      <select name="recipients" id="recipient" multiple="multiple">
+        {% for recipient in recipients %}
+        <option name="recipient" value="{{ recipient.ph_number }}">{{ recipient.name }}</option>
+        {% endfor %}
+      </select>
+      <hr id="rline">
+      <p>Ctrl+ to select multiple</p>
+    </div>
+    </form>
+  </div>
+</div>
+<h5 id="past-messages">Sent Messages</h5>
+<div class="tblcontainer">
+  <table id="msgtable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Message</th>
+        <!-- <th>Recipients</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for message in profile.message_set.all %}
+      <tr>
+        <td>{{message.date}}</td>
+        <td>{{message.content}}</td>
+        <td>{{ message.recipient }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endblock %}
+</div>

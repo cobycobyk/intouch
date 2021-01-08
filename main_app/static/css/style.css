@@ -54,6 +54,7 @@ header.navbar-fixed {
 .landingPanel2{
   height: 50vh;
   padding: 10vmin;
+  margin-top: 5%;
 }
 .landingPanel3{
   height: 60vh;
@@ -246,6 +247,7 @@ body > main > div.recipient > form {
 .inlineBtn {
   display: inline;
 }
+
 .recipients {
   padding: 2vmin;
   text-transform: capitalize;
@@ -266,4 +268,81 @@ body > main > div > div > span > p{
 body > main > div > div > p {
   text-transform: capitalize;
 }
+#compose-title {
+  text-align: center;
+}
+#compose-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#compose-message > p {
+  text-align: left;
+  text-decoration: underline;
+}
+#compose-message > input {
+  text-align: right;
+  color: blue
+}
+#new-recipient {
+  display: flex;
+  flex-direction: column;
+}
+#recipient {
+  border: none;
+  background-color: lightgray;
+  width: 70%;
+}
+#past-messages {
+  text-align: center;
+  text-decoration: underline;
+}
+#inlineBtn > input {
+  display: inline;
+  float: right;
+}
+#msgtable {
+  text-align: center;
+  align-items: center;
+  border-spacing: 2vmin 0;
+}
+thead {
+  text-decoration: underline;
+}
+body > main > section.landing1 > div > div.grid-container > div > p {
+  line-height: 1.5;
+}
+body > main > section.landingPanel2 > div > div > p {
+  line-height: 2;
+}
+body > main > section.landingPanel3 > div > div > p {
+  line-height: 2;
+}
+.info {
+  line-height: 2 !important;
+}
 
+.msgContainer {
+  padding: 5vmin;
+}
+.grid-container2{
+  display: grid;
+  margin: 0 10% 0 10%;
+  grid-template-columns: 40% 40%;
+  text-align: center;
+  justify-content: center;
+}
+#rline {
+  margin: 3% 25% 3% 25%;
+}
+body > main > table > tbody > tr > td {
+  text-align: center;
+}
+.tblcontainer{
+margin: 0;
+display: flex;
+justify-content: center;
+}
+#msgtable > tbody > tr > td {
+  padding: 1vmin 3vmin ;
+}
