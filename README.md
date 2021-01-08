@@ -8,7 +8,7 @@ Whether they are working remotely or spread out across the country, staying in t
 
 --- 
 ## App Design
-Screenshots:
+Screenshots: More to come
 
 App Planning: [Trello Board](https://trello.com/b/reUp27c0/intouch-django-app), [Pitch Deck](https://trello.com/c/kzlKVfor/14-pitch-deck)
 
