@@ -160,3 +160,32 @@ body > footer > div > div > div > a {
   display: block;
   padding-top: 1%;
 }
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+.card {
+  display: flex;
+  margin: 10vmin;
+}.card-deck {
+  display: flex;
+}
