@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Profile</h1>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" class="btn" value="submit">
-</form>
-<a href="{% url 'home' %}">Cancel</a>
+<div class="recipient card">
+    <h1>Add Recipient</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <div class="inlineBtn">
+            <input class="btn btn-primary btn-sm" type="submit" value="submit"></input>
+            <a class="btn btn-primary btn-sm" href="{% url 'recipient_index' %}">Cancel</a>
+        </div>
+    </form>
+</div>
 {% endblock %}

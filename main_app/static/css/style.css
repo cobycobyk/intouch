@@ -232,3 +232,28 @@ body > main > .profile > form > table > tbody > tr {
   margin: 2vmin;
   height: 7vmin;
 }
+body > main > div.container > div > div > div.card-body > ul > li {
+  margin: 2vmin;
+}
+.recipient {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+body > main > div.recipient > form {
+  display: inline-grid;
+}
+.inlineBtn {
+  display: inline;
+}
+.recipients {
+  padding: 2vmin;
+  text-transform: capitalize;
+  margin: 3vmin;
+}
+body > main > div > div > p > span {
+ font-weight: bold;
+}
+.Rmain {
+  padding: 10vmin;
+}
