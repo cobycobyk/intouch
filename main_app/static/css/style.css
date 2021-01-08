@@ -41,6 +41,10 @@ header.navbar-fixed {
 .l1title {
   margin-top: 0;
   margin-bottom: 10vmin;
+  text-align: center;
+}
+.l1title > h1{
+ font-weight: bolder;
 }
 .grid-container {
   display: grid;
@@ -55,6 +59,11 @@ header.navbar-fixed {
   height: 50vh;
   padding: 10vmin;
   margin-top: 5%;
+}
+.landingPanel2{
+  height: 50vh;
+  padding: 10vmin;
+  padding-top: 3vmin;
 }
 .landingPanel3{
   height: 60vh;
@@ -346,4 +355,11 @@ justify-content: center;
 }
 #msgtable > tbody > tr > td {
   padding: 1vmin 3vmin ;
+}
+.l1titleabout {
+  text-emphasis: center;
+}
+.l1titleabout > h1 {
+  text-emphasis: left;
+  line-height: 1;
 }
