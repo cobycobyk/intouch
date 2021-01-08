@@ -36,7 +36,7 @@ header.navbar-fixed {
   width: 100vw;
 }
 .landing1 {
-  height: 100vh;
+  height: 110vh;
   padding: 4%;
 }
 .l1Header {
@@ -64,7 +64,7 @@ header.navbar-fixed {
   padding: 10vmin;
 }
 .landingPanel4{
-  height: 100vh;
+  height: 200vh;
   padding: 10%;
 }
 .landingPanel2g{
@@ -85,7 +85,7 @@ header.navbar-fixed {
   grid-template-rows: 50% 50%;
   text-align: center;
   grid-gap: 0 0;
-  background-color: blue;
+  justify-items: center;
 }
 .l4header {
   text-align: center;
@@ -100,9 +100,6 @@ header.navbar-fixed {
   max-width: 85%;
   height: auto;
   float: right;
-}
-h1 {
-  font-size: 100px;
 }
 body{ height:100vh; margin:0; }
 
@@ -123,5 +120,29 @@ header{
   height: 4%;
 }
 main {
-  margin-top: 3%;
+  margin-top: 4%;
+}
+body > header > nav > div > a > img {
+  padding: 0;
+  width: 6vmin;
+  height: auto;
+}
+.navbar-brand {
+  margin-left: .5rem;
+  margin-right: .5rem; 
+}
+.carousel-caption {
+  bottom: 4rem;
+}
+.flex-container {
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.companies {
+  margin: 5px;
+  height: 45vmin;
+}
+
+body {
+  line-height: 1;
 }
