@@ -8,10 +8,6 @@ main {
   flex: 1 0 auto;
 }
 
-footer.page-footer {
-  padding-top: 0;
-  text-align: right;
-}
 .top-content .carousel-item {
     height: 100vh;
     min-height: 400px;
@@ -64,7 +60,7 @@ header.navbar-fixed {
   padding: 10vmin;
 }
 .landingPanel4{
-  height: 200vh;
+  height: 150vh;
   padding: 10%;
 }
 .landingPanel2g{
@@ -105,22 +101,20 @@ body{ height:100vh; margin:0; }
 
 header{ 
   min-height:50px; background:lightcyan;
-}
+} 
 footer{ 
-  min-height:50px; background:rgb(206, 206, 206);
+  background: #d1d1d1;
+  margin-top: 10vmin;
 }
 body{ 
   display:flex; 
   flex-direction:column; 
 }
-footer{
-  margin-top:auto; 
-}
 header{
   height: 4%;
 }
 main {
-  margin-top: 4%;
+  margin-top: 4.5%;
 }
 body > header > nav > div > a > img {
   padding: 0;
@@ -145,4 +139,69 @@ body > header > nav > div > a > img {
 
 body {
   line-height: 1;
+}
+.landingPanle5{
+  margin-top: 10%;
+
+}
+.left {
+  float: left;
+}
+.right {
+ float: right;
+}
+
+body > footer > div > div > div > a > img{
+  padding: 0;
+  width: 6vmin;
+}
+body > footer > div > div > div > a {
+  text-align: center;
+  display: block;
+  padding-top: 1%;
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+.card {
+  display: flex;
+  margin: 10vmin;
+}.card-deck {
+  display: flex;
+}
+.signup {
+  text-align: center;
+}
+
+form {
+  align-self: center;
+}
+body > main > div > form > input.btn {
+  background-color: #0275d8;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin: 5vmin 2vmin;
+  cursor: pointer;
 }
